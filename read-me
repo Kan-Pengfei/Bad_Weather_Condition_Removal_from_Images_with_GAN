@@ -1,0 +1,24 @@
+1. Prepare: 
+The code is developed based on Linux system 
+
+install OpenCV
+install Lua
+install torch
+install nngraph
+install hdf5
+
+make the alias of the "opencvLua" to compile_opencv_lua.sh in your path 
+
+2. Process your own images
+You can generate your own training dataset for the GAN model. 
+Just put your clear images inside the "Clear-Images" direcotry, my code 
+will generate all the corrosponding training images for you 
+
+Put your images in the file "Your-Images"  
+Delete old images in "Rain-Dataset/Testing"
+In the terminal input "opencvLua Main.cpp" to compile the code 
+And then input "./Main" to run the code 
+
+You can modify the code by yourself:
+change the training epoch times in train.lua
+use your own images to generate your training dataset
