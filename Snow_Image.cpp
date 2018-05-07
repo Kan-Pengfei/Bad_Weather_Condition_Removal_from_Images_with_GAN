@@ -151,7 +151,7 @@ cv::Mat SnowImg::addSnow()
 		double mean = means.val[0];
 		cv::Mat I = cv::Mat::ones(clear_img.size(), CV_64F); 
 		for (int i = 0; i < 3; ++i)
-			chns[i] = chns[i].mul(mean) + snow_mask_img.mul(1 - mean);
+			chns[i] = chns[i].mul(0.7) + snow_mask_img.mul(0.5);
 		cv::merge(chns, snow_add_img);
 		return snow_add_img;
 	}
