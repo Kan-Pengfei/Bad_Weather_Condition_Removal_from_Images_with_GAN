@@ -275,7 +275,7 @@ cv::Mat RainImg::addRain()
 		for (int i = 0; i < 3; ++i)
 		{
 			cv::multiply((I - chns[i]), rain_streak_img, rain_streak_img, 1); 
-			chns[i] = chns[i].mul(mean) + rain_streak_img.mul(1 - mean);
+			chns[i] = chns[i].mul(0.7) + rain_streak_img.mul(0.5);
 		}
 		cv::merge(chns, rain_add_img);
 		return rain_add_img;
